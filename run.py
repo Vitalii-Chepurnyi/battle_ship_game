@@ -1,5 +1,7 @@
 from random import randint
 
+scores = {"computer": 0, "player": 0}
+
 class Board:
     """
     Main Board. Sets parameters for board type(player of computer)
@@ -33,9 +35,24 @@ class Board:
         else:
             return "Miss"
     
-    def add_ship():
+    def add_ship(self, x, y, type="computer"):
+        # Add ships to the board
+        if len(self.ships) >= self.num_ships:
+            print("Error: you cannot add any more ships!")
+        else:
+            self.ships.append((x, y))
+            if self.type == "player":
+                self.board[x][y] = "@"
 
-def play_game():'
+def populate_board(board):
+    # Randomly add ships to the board
+    while len(board.ships) < board.num_ships:
+        x = random_point(board.size)
+        y = random_point(board.size)
+        if (x, y) not in board.ships:
+            board.add_ship(x, y)
+            
+#def play_game():'
 
 def new_game():
     size = 8
