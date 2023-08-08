@@ -16,7 +16,7 @@ class Board:
         self.guesses = []
         self.ships = []
     
-    def print():
+    def print(self):
         # Prints column numbers
         print("  " + " ".join(str(i) for i in range(self.size)))
 
@@ -24,7 +24,7 @@ class Board:
             # Prints row letter
             print(chr(65 + i) + "  " + " ".join(row))
 
-    def guess():
+    def guess(self, x, y):
         # Guesses if you hit or miss the ship
         self.guesses.append((x, y))
         self.board[x][y] = "X"
@@ -120,7 +120,9 @@ def play_game(computer_board, player_board):
             break
         elif scores["player"] == player_board.num_ships:
             print("\nCongratulations! You Win The Game!")
-            break   
+            break 
+
+        turn += 1  
 
 def new_game():
     """
