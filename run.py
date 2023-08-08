@@ -136,6 +136,7 @@ def play_game(computer_board, player_board):
         turn += 1
 
     if turn > max_turns:
+        # End of the game message
         print("\nMaximum turns reached.")
         winner = check_winner()
         if winner == "computer":
