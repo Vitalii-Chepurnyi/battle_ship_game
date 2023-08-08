@@ -64,10 +64,21 @@ def populate_board(board):
         if (x, y) not in board.ships:
             board.add_ship(x, y)
 
+def check_winner():
+    # Checks the scores of the computer and the player to determine the winner
+    if scores["computer"] > scores["player"]:
+        return "computer"
+    elif scores["computer"] < scores["player"]:
+        return "player"
+    else:
+        return "draw"
+
 def valid_row_input(row_input):
+    # Checks if the entered row input is valid (A to H)
     return row_input.upper() in [chr(65 + i) for i in range(8)]
 
 def valid_column_input(col_input, size):
+    # Checks if the entered column input is valid ( 0 to 7)
     return col_input.isdigit() and 0 <= int(col_input) < size
             
 def play_game(computer_board, player_board):
@@ -122,7 +133,17 @@ def play_game(computer_board, player_board):
             print("\nCongratulations! You Win The Game!")
             break 
 
-        turn += 1  
+        turn += 1
+
+    if turn > max_turns:
+        print("\nMaximum turns reached.")
+        winner = check_winner()
+        if winner == "computer":
+            print("Computer wins the game!")
+        elif winner == "player":
+            print("Comgratulations! You win the game!")
+        else:
+            print("It's a draw!")
 
 def new_game():
     """
