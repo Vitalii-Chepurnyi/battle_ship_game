@@ -44,6 +44,18 @@ class Board:
             if self.type == "player":
                 self.board[x][y] = "@"
 
+def letter_to_row_index(letter):
+    #Converts a letter (a,b,c ...) to the row index (0,1,2 ...)
+    return ord(letter.upper()) - 65
+
+def number_to_column_index(number):
+    #Converts a number (0,1,2 ...) to the column index (0,1,2 ...)
+    return int(number)
+    
+def random_point(size):
+    # Returns a random point on the board
+    return randint(0, size - 1)
+    
 def populate_board(board):
     # Randomly add ships to the board
     while len(board.ships) < board.num_ships:
@@ -68,5 +80,9 @@ def new_game():
 
     computer_board = Board(size, num_ships, "Computer", type="computer")
     player_board = Board(size, num_ships, player_name, type="player")
+
+    for _ in range(num_ships):
+        populate_board(player_board)
+        populate_board(computer_board)
 
 new_game()
