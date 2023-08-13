@@ -152,7 +152,7 @@ def play_game(computer_board, player_board):
         if winner == "computer":
             print("Computer wins the game!")
         elif winner == "player":
-            print("Comgratulations! You win the game!")
+            print("Congratulations! You win the game!")
         else:
             print("It's a draw!")
 

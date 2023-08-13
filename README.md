@@ -80,3 +80,16 @@ The excitement of each game lies in the strategic choices and the thrill of the 
 </ul>
 
 ![Alt Text](assets/images/validation.jpg)
+
+<ul>
+    <li>End of game:
+        <ol>
+            <li>Depends on the score of player or computer, the end of game results as follows.
+            <li>"Computer wins the game!"
+            <li>"Congratulations! You win the game!"
+            <li>"It's a draw!"
+            <li>It will also indicate the maximum turns has been reached. 
+        </ol>
+</ul>
+
+![Alt Text](assets/images/endofgame.jpg)
