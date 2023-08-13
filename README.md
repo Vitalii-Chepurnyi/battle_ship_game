@@ -68,3 +68,15 @@ The excitement of each game lies in the strategic choices and the thrill of the 
 </ul>
 
 ![Alt Text](assets/images/turns.png)
+
+<ul>
+    <li>Input validation:
+        <ol>
+            <li>You cannot enter coordinates outside of the grid.
+            <li>For row: you must enter a letter.
+            <li>For column: you must enter a number.
+            <li>Unless you will get error message : "Incorrect input. Please try again!
+        </ol>
+</ul>
+
+![Alt Text](assets/images/validation.jpg)
