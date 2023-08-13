@@ -43,3 +43,17 @@ Playing Again:
 
 After the game ends, players can reset the boards and start a new game.
 The excitement of each game lies in the strategic choices and the thrill of the unknown.
+
+# Features
+
+<ul>
+    <li>Random Board Generation:
+        <ol>
+            <li>Ships are randomly placed on both the player and computer boards.
+            <li>The player cannot see where computer's ships are.
+            <li>The boards generate every turn, either player's or computer's.
+            <li>Each turn indicated on top of the boards.
+        </ol>
+</ul>
+
+![Alt Text](assets/images/gen_board_game.jpg)
