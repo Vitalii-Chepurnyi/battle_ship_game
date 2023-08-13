@@ -2,6 +2,7 @@ from random import randint
 
 scores = {"computer": 0, "player": 0}
 
+
 class Board:
     """
     Main Board. Sets parameters for board type(player of computer)
@@ -15,7 +16,7 @@ class Board:
         self.type = type
         self.guesses = []
         self.ships = []
-    
+
     def print(self):
         # Prints column numbers
         print("  " + " ".join(str(i) for i in range(self.size)))
@@ -34,7 +35,7 @@ class Board:
             return "Hit"
         else:
             return "Miss"
-    
+
     def add_ship(self, x, y, type="computer"):
         # Add ships to the board
         if len(self.ships) >= self.num_ships:
@@ -44,18 +45,22 @@ class Board:
             if self.type == "player":
                 self.board[x][y] = "@"
 
+
 def letter_to_row_index(letter):
-    #Converts a letter (a,b,c ...) to the row index (0,1,2 ...)
+    # Converts a letter (a,b,c ...) to the row index (0,1,2 ...)
     return ord(letter.upper()) - 65
 
+
 def number_to_column_index(number):
-    #Converts a number (0,1,2 ...) to the column index (0,1,2 ...)
+    # Converts a number (0,1,2 ...) to the column index (0,1,2 ...)
     return int(number)
-    
+
+
 def random_point(size):
     # Returns a random point on the board
     return randint(0, size - 1)
-    
+
+
 def populate_board(board):
     # Randomly add ships to the board
     while len(board.ships) < board.num_ships:
@@ -63,6 +68,7 @@ def populate_board(board):
         y = random_point(board.size)
         if (x, y) not in board.ships:
             board.add_ship(x, y)
+
 
 def check_winner():
     # Checks the scores of the computer and the player to determine the winner
@@ -73,17 +79,21 @@ def check_winner():
     else:
         return "draw"
 
+
 def valid_row_input(row_input):
     # Checks if the entered row input is valid (A to H)
     return row_input.upper() in [chr(65 + i) for i in range(8)]
 
+
 def valid_column_input(col_input, size):
     # Checks if the entered column input is valid ( 0 to 7)
     return col_input.isdigit() and 0 <= int(col_input) < size
-            
+
+
 def play_game(computer_board, player_board):
     """
-    Main game loop where players take turns to make guesses until one of the players
+    Main game loop where players take turns to make guesses
+    until one of the players
     Wins the game or 20 turn are completed.
     """
     max_turns = 20
@@ -98,7 +108,7 @@ def play_game(computer_board, player_board):
         if turn % 2 == 1:
             print("\nComputer's Turn.")
             x, y = random_point(player_board.size), random_point(player_board.size)
-            result = player_board.guess(x,y)
+            result = player_board.guess(x, y)
             if result == "Hit":
                 scores["computer"] += 1
                 print("Computer hit one of your ships!")
@@ -114,11 +124,11 @@ def play_game(computer_board, player_board):
                     print("Incorrect input. Please try again!")
                 else:
                     break
-            
+
             x = letter_to_row_index(x_letter)
             y = number_to_column_index(y_number)
 
-            result = computer_board.guess(x,y)
+            result = computer_board.guess(x, y)
 
             if result == "Hit":
                 scores["player"] += 1
@@ -131,7 +141,7 @@ def play_game(computer_board, player_board):
             break
         elif scores["player"] == player_board.num_ships:
             print("\nCongratulations! You Win The Game!")
-            break 
+            break
 
         turn += 1
 
@@ -145,6 +155,7 @@ def play_game(computer_board, player_board):
             print("Comgratulations! You win the game!")
         else:
             print("It's a draw!")
+
 
 def new_game():
     """
@@ -170,5 +181,6 @@ def new_game():
         populate_board(computer_board)
 
     play_game(computer_board, player_board)
+
 
 new_game()
