@@ -93,3 +93,22 @@ The excitement of each game lies in the strategic choices and the thrill of the 
 </ul>
 
 ![Alt Text](assets/images/endofgame.jpg)
+
+# Future Features
+
+<ul>
+    <li>Allow player to position their own ships.
+    <li>Have ships larger then 1x1.
+</ul>
+
+# Data Model
+
+I decided to use Board class as my model. The game creates two instances of the Board class to hold the player's and 
+the computer's board.
+
+The Board class stores the board size, ships, the position of hte ships, the guesses against the board,
+and details such as the board type (player's board or computer) and the player's name.
+
+The class also has methods to help play the game, such as <strong>print</strong> method to print out the current board,
+an <strong>add_ships</strong> method to add ships to the board and an <strong>guess</strong> method to add a guess and return the result.
+
