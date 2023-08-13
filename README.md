@@ -57,3 +57,14 @@ The excitement of each game lies in the strategic choices and the thrill of the 
 </ul>
 
 ![Alt Text](assets/images/gen_board_game.jpg)
+
+<ul>
+    <li>Indicator for Turns:
+        <ol>
+            <li>Shows how many turns player have in total.
+            <li>Turns are shared with the computer.
+            <li>Each turn player or computer takes it brings the amount of turns down.
+        </ol>
+</ul>
+
+![Alt Text](assets/images/turns.png)
