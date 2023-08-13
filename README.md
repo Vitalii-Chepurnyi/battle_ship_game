@@ -6,3 +6,8 @@ Experience the thrill of outsmatring your opponent with every move, aiming for v
 Immerse yourselft in the battle, strategize wisely, and relish the excitement of being crowned the ultimate sea commander!
 
 Game link here! ===> [HardCore BattleShips!](https://hardcorebattleships-92d1b8be4b51.herokuapp.com/)
+
+![Alt Text](assets/images/responsive%20battle.jpg)
+
+# How to Play
+
