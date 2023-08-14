@@ -126,7 +126,7 @@ I have manually tested this project by doing the followin:
 ## Solved Bugs
 
 <ul>
-    <li>When i wrote the project, I was getting index errors because I forgotten to add and argument to functions <strong>def guess, def print</strong>.
+    <li>When i wrote the project, I was getting index errors because I forgotten to add an argument to functions <strong>def guess, def print</strong>.
     <li>Also forgot to add function call for <strong>play_game()</strong> in <strong>new_game</strong> function.
 </ul>
 
@@ -156,7 +156,7 @@ This project was deployed using Code Institute's mock terminal for Heroku.
 
 -Create a new Heroku app
 
--Set the buildbacks to <h3>Python</h3> and <h3>NodeJS</h3> in that order.
+-Set the buildbacks to <strong>Python</strong> and <strong>NodeJS</strong> in that order.
 
 -Link the Heroku app to the repository
 
