@@ -112,3 +112,58 @@ and details such as the board type (player's board or computer) and the player's
 The class also has methods to help play the game, such as <strong>print</strong> method to print out the current board,
 an <strong>add_ships</strong> method to add ships to the board and an <strong>guess</strong> method to add a guess and return the result.
 
+# Testing
+
+I have manually tested this project by doing the followin:
+<ul>
+    <li>Tested via PEP8 linter and confirmed there are no problems.
+    <li>Given invalid inputs.
+    <li>Tested in my local terminal and the Code Institute Heroku Terminal.
+</ul>
+
+# Bugs
+
+## Solved Bugs
+
+<ul>
+    <li>When i wrote the project, I was getting index errors because I forgotten to add and argument to functions <strong>def guess, def print</strong>.
+    <li>Also forgot to add function call for <strong>play_game()</strong> in <strong>new_game</strong> function.
+</ul>
+
+## Remaining Bugs
+
+<ul>
+    <li>No bugs remaining.
+</ul>
+
+## Validator Testing
+
+PEP8
+<ul>
+    <li>Only these errors had occure but I didn't take it into consideration, since I didn't have several files open side-by-side.
+    <li>It does not have any impact on the game itself.
+    <li>110: E501 line too long (83 > 79 characters)
+    <li>123: E501 line too long (104 > 79 characters)
+</ul>
+
+# Deployment
+
+This project was deployed using Code Institute's mock terminal for Heroku.
+
+<strong>Steps for deployment:</strong>
+
+-Fork or clone this repository
+
+-Create a new Heroku app
+
+-Set the buildbacks to <h3>Python</h3> and <h3>NodeJS</h3> in that order.
+
+-Link the Heroku app to the repository
+
+-Click on Deploy
+
+# Credits
+
+-Code Institute for the deployment terminal.
+
+-Wikipedia for the details of the Battleships game.
